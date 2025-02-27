@@ -1,4 +1,4 @@
-
+## Manuel Felipe Barrera Barrera
 ### Escuela Colombiana de Ingeniería
 ### Arquitecturas de Software - ARSW
 ## Parcial 1 - Paralelismo - Hilos - Caso BlackListSearch
