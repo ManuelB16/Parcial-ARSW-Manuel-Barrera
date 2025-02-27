@@ -19,8 +19,8 @@ public class BlacklistsSearchThread extends Thread {
         this.blackListOcurrences = blackListOcurrences;
         this.sharedCounter = sharedCounter;
     }
+    
     @Override
-
     public void run(){
         for (int i = startIndex; i < endIndex && SharedCounter.get() < HostBlackListsValidator.BLACK_LIST_ALARM_COUNT; i++){
             if(skds.isInBlackListServer(i, ipaddress)) {
