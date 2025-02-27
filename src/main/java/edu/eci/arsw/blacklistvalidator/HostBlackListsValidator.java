@@ -8,7 +8,6 @@ package edu.eci.arsw.blacklistvalidator;
 import edu.eci.arsw.spamkeywordsdatasource.HostBlacklistsDataSourceFacade;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
@@ -62,7 +61,7 @@ public class HostBlackListsValidator {
 
         return blackListOcurrences;
     }
-    
+    @SuppressWarnings("unused")
     private static final Logger LOG = Logger.getLogger(HostBlackListsValidator.class.getName());
     
 }
