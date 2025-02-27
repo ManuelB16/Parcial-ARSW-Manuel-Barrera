@@ -34,10 +34,14 @@ Para 'refactorizar' este código, y hacer que explote la capacidad multi-núcleo
 
 1. Cree una clase de tipo Thread que represente el ciclo de vida de un hilo que haga la búsqueda de un segmento del conjunto de servidores disponibles.
 
+Se añade la clase BlacklistsSearchThread junto con SharedCounter para la busqueda del segmento dentro de los servidores disponibles.
+
 ![image](https://github.com/user-attachments/assets/593e78c0-8d05-4f69-b5d6-4a9232ebcaa9)
 ![image](https://github.com/user-attachments/assets/9c88733e-b198-42e7-962f-789ca14a63e6)
 
 2. Agregue al método 'checkHost' un parámetro entero N, correspondiente al número de hilos entre los que se va a realizar la búsqueda (recuerde tener en cuenta si N es par o impar!). Modifique el código de este método para que divida el espacio de búsqueda entre las N partes indicadas, y paralelice la búsqueda a través de N hilos.
+
+Se modifica el metodo checkHost para que divida el espacio de busqueda entre las N partes indicadas y paralice la busqueda con N hilos.
 
 ![image](https://github.com/user-attachments/assets/c17cd222-1dd5-4cb1-91b1-da3098387a8f)
 
@@ -47,6 +51,8 @@ Para 'refactorizar' este código, y hacer que explote la capacidad multi-núcleo
 	* No se deben generar esperas activas nuevas, ni condiciones carrera. 
 	
 	* Se sabe que el HOST 202.24.34.55 está reportado en listas negras de una forma más dispersa, y que el host 212.24.24.55 NO está en ninguna lista negra.
+
+Se realiza la modificacion para el numero de BLACK_LIST_ALARM_COUNT y el espacio para sus reportes.
 
 ![image](https://github.com/user-attachments/assets/f8183922-fc93-40d5-b3fa-a0d54f76ad07)
 ![image](https://github.com/user-attachments/assets/a3756bad-3d47-4e2c-b139-cb0d3f84d2f2)
